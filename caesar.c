@@ -7,11 +7,16 @@ int main(int argc, string argv[])
 {
     if(argc != 2)
     {
-        printf("Usage: ./caesar key");
+        printf("Usage: ./caesar key\n");
         return 1;
     }
+    for(int j = 0; j< strlen(argv[1]);j++)
     {
-        
+        if(!(argv[1][j]>=48&&argv[1][j]<=57))
+        {
+             printf("Usage: ./caesar key\n");
+        return 1;
+        }
     }
     int a = atoi(argv[1]);
     int a1 = a%26;
